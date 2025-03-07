@@ -26,11 +26,18 @@ pipeline {
             }
         }
 
-        stage('Terraform Apply') {
+        // stage('Terraform Apply') {
+        //     steps {
+        //         sh 'terraform apply -auto-approve'
+        //     }
+        // }
+
+        stage('Terraform Destroy') {
             steps {
-                sh 'terraform apply -auto-approve'
+                sh 'terraform destroy -auto-approve'
             }
         }
+
     }
 
     post {
@@ -40,5 +47,6 @@ pipeline {
         failure {
             echo 'Pipeline failed!'
         }
+
     }
 }
