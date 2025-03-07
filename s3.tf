@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "tf_state" {
-  bucket = "tf-state-myproject-dev-123"  # Replace with a unique name
+  bucket = "tf-state-myproject-dev-goa"  # Replace with a unique name
   force_destroy = true  # Caution: Allows bucket deletion even if not empty
 }
 
